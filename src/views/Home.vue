@@ -1,12 +1,9 @@
 <template>
   <main v-if="!loading">
     <DataTitle :text="title" :dataDate="dataDate" />
-
     <DataBoxes :stats="stats" />
-
     <CountrySelect @get-country="getCountryData" :countries="countries" />
-
-    <button @click="clearCountryData" v-if="stats.Country" class="bg-green-700 text-white rounded p-3 mt-10 focus:outline-none hover:bg-green-600">Clear Country</button>
+    <button @click="clearCountryData" v-if="stats.Country" class="bg-green-700 text-white rounded p-3 mt-10 focus:outline-none hover:bg-green-600">Clear Country</button>    
   </main>
 
   <main class="flex flex-col align-center justify-center text-center" v-else>
